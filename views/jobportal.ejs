@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include( 'commonLinks')%>
+
+        <meta charset="UTF-8">
+        <title>Document</title>
+
+
+        <style>
+            .jobposting {
+                border-radius: 0 !important;
+            }
+            .jobposting:hover {
+                opacity: 0.7;
+            }
+            .jobpost a:link,
+            .jobpost a:visited {
+                color: black;
+                text-decoration: none;
+            }
+        </style>
+</head>
+
+<body>
+
+    <%-include( 'jobPortalNavbar')%>
+
+        <div class="container" id="cwrap">
+            <div class="page-header">
+                <h2>Top job posts</h2>
+            </div>
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <div class="popular container">
+
+            <div class="page-header">
+                <h2>Available Jobs </h2>
+            </div>
+
+            <%for(var i=0;i<jobpostings.length;i++){ %>
+                <div class="col-lg-4 col-md-6 col-xs-12 thumb jobpost">
+                    <a class="thumbnail jobposting" href="details/<%-jobpostings[i]["_id"]%>">
+                        <div class="">
+                            <h4><%-jobpostings[i]["PostName"]%></h4>
+                        </div>
+                        <div class="text-left">
+                            <%-jobpostings[i][ "CompanyName"]%>
+                        </div>
+                        <div class="text-left">
+                            <%-jobpostings[i][ "city"]%>
+                        </div>
+
+                    </a>
+                </div>
+                <%}%>
+        </div>
+
+
+        <% var label=[],data=[]; for(var i=0;i<graph_data.length;i++){ label.push(graph_data[i].label); data.push(graph_data[i].data); label[i]="'" +label[i]+ "'"; } label="[" +label+ "]"; data="[" +data+ "]"; %>
+
+            <script src="/javascripts/Chart.min.js"></script>
+            <script>
+                var data = {
+                    labels: <%-label%> ,
+                    datasets: [{
+                        label: "My Second dataset",
+                        fillColor: "rgba(51, 255, 174,0.7)",
+                        strokeColor: "rgba(151,187,205,0.8)",
+                        highlightFill: "rgba(151,187,205,0.75)",
+                        highlightStroke: "rgba(151,187,205,1)",
+                        data: <%-data%>
+                    }]
+                };
+                var ctx = document.getElementById("myChart").getContext("2d");
+                var myBarChart = new Chart(ctx).Bar(data, {
+                    responsive: true
+                });
+            </script>
+</body>
+<%-jobpostings%>
+
+</html>

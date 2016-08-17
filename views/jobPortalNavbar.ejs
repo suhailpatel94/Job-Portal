@@ -1,0 +1,78 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#myNavbar" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Job Portal</a>
+        </div>
+        <div id="myNavbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/jobportal/">Home</a></li>
+
+            </ul>
+
+            <%if(!session){%>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Job Seeker <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/jobportal/employeeRegistration">Register</a></li>
+                            <li><a href="/jobportal/employeeLogin">Login</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Employer <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/jobportal/employerRegistration">Register</a></li>
+                            <li><a href="/jobportal/employerLogin">Login</a></li>
+
+
+                        </ul>
+                    </li>
+                </ul>
+                <%} else if(session.CompanyName){ %>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/jobportal/myjobs">Show applicants</a></li>
+                        <li><a href="/jobportal/jobPosting">Post a job</a></li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <%-session.CompanyName;%> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <form class="horizontal-form" action="/jobportal/logout" method="post">
+                                        <div class="form-group">
+
+                                            <input type="submit" value="Logout" class="form-control btn btn-danger">
+                                        </div>
+
+                                    </form>
+                                </li>
+
+
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <%} else{ %>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Job Seeker <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <form class="horizontal-form" action="/jobportal/logout" method="post">
+                                            <div class="form-group">
+
+                                                <input type="submit" value="Logout" class="form-control btn btn-danger">
+                                            </div>
+
+                                        </form>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <% } %>
+        </div>
+    </div>
+</nav>

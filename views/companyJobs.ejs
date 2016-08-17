@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include( 'commonLinks')%>
+
+        <meta charset="UTF-8">
+        <title>Document</title>
+
+
+        <style>
+            .jobposting {
+                border-radius: 0 !important;
+            }
+            
+            .jobposting:hover {
+                opacity: 0.7;
+            }
+            
+            .jobpost a:link,
+            .jobpost a:visited {
+                color: black;
+                text-decoration: none;
+            }
+        </style>
+</head>
+
+<body>
+
+    <%-include( 'jobPortalNavbar')%>
+
+
+
+        <div class="popular container">
+
+           
+        <div class="page-header">
+            <h2>My Jobs </h2>
+        </div>
+           
+           
+            <%for(var i=0;i<jobpostings.length;i++){ %>
+                <div class="col-lg-4 col-md-6 col-xs-12 thumb jobpost">
+                    <a class="thumbnail jobposting" href="/jobportal/myjobs/<%-jobpostings[i]["_id"]%>">
+                        <div class="">
+                            <h4><%-jobpostings[i]["PostName"]%></h4>
+                        </div>
+                        <div class="text-left">
+                            <%-jobpostings[i][ "CompanyName"]%>
+                        </div>
+                        <div class="text-left">
+                            <%-jobpostings[i][ "city"]%>
+                        </div>
+
+                    </a>
+                </div>
+                <%}%>
+        </div>
+
+</body>
+
+</html>

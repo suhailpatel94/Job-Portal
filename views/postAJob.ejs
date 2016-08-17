@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include('commonLinks')%>
+        <meta charset="UTF-8">
+        <title>Job Posting</title>
+</head>
+
+<body>
+    <%-include('jobPortalNavbar');%>
+        <div class="page-header">
+            <h1>Post a Job</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Job posting</div>
+                        <div class="panel-body">
+                            <form action="/jobportal/jobPosting" method="post" class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Post Name</label>
+                                    <div class="col-md-6">
+                                        <input id="PostName" name="PostName" placeholder="PostName" required="" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                
+                                  <div class="form-group">
+                                    <label class="col-md-4 control-label">Vacancy</label>
+                                    <div class="col-md-6">
+                                        <input id="vacancy" name="vacancy" placeholder="vacancy" required="" type="number" class="form-control" />
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">E-Mail</label>
+                                    <div class="col-md-6">
+                                        <input id="email" name="email" placeholder="email" required="" type="email" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Required Skills</label>
+                                    <div class="col-md-6">
+                                        <textarea name="RequiredSkills" id="RequiredSkills" placeholder="Enter skill in new Line." required="" cols="30" rows="10" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Other Skills</label>
+                                    <div class="col-md-6">
+
+                                        <textarea name="OtherSkills" id="OtherSkills" placeholder="Enter skill in new Line." required="" cols="30" rows="10" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Salary</label>
+                                    <div class="col-md-6">
+                                        <input id="Salary" name="Salary" placeholder="Salary" required="" type="number" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Description</label>
+                                    <div class="col-md-6">
+                                        <textarea name="Description" id="Description" placeholder="Description" required="" cols="30" rows="10" class="form-control"></textarea>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">Contact No</label>
+                                    <div class="col-md-6">
+                                        <input id="contactnumber" name="contactnumber" placeholder="12345678" required="" type="number" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label">City</label>
+                                    <div class="col-md-6">
+                                        <input id="City" name="city" placeholder="City" required="" type="text" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-6 col-md-offset-4">
+                                        <input id="submit" value="Sign Up" name="submit" type="submit" class="buttom btn btn-primary" />
+
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

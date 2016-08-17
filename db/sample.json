@@ -1,0 +1,118 @@
+{
+    "_id": ObjectId("56f4d217f2c3271b907f2253"),
+    "name": "Android Development",
+    "material": {
+        "docs": [
+            {
+                "week": "week 1",
+                "name": "DevelopmentEnvironment.pdf",
+                "url": "courses/Android Development/week 1/docs/DevelopmentEnvironment.pdf"
+                        },
+            {
+                "week": "week 1",
+                "name": "Introduction.pdf",
+                "url": "courses/Android Development/week 1/docs/Introduction.pdf"
+                        },
+            {
+                "week": "week 2",
+                "name": "ApplicationFundamentals.pdf",
+                "url": "courses/Android Development/week 2/docs/ApplicationFundamentals.pdf"
+                        },
+            {
+                "week": "week 2",
+                "name": "TheActivityClass.pdf",
+                "url": "courses/Android Development/week 2/docs/TheActivityClass.pdf"
+                        },
+            {
+                "week": "week 3",
+                "name": "Fragments.pdf",
+                "url": "courses/Android Development/week 3/docs/Fragments.pdf"
+                        },
+            {
+                "week": "week 3",
+                "name": "Intents.pdf",
+                "url": "courses/Android Development/week 3/docs/Intents.pdf"
+                        },
+            {
+                "week": "week 3",
+                "name": "Permissions.pdf",
+                "url": "courses/Android Development/week 3/docs/Permissions.pdf"
+                        }
+                ],
+        "vids": [
+            
+            {
+                "week": "week 1",
+                "name": "1 - 1 - Introduction to the Android Platform (18_19).mp4",
+                "url": "courses/Android Development/week 1/vids/1 - 1 - Introduction to the Android Platform (18_19).mp4"
+                        },
+            {
+                "week": "week 1",
+                "name": "1 - 2 - The Android Development Environment - Part 1 (18_06).mp4",
+                "url": "courses/Android Development/week 1/vids/1 - 2 - The Android Development Environment - Part 1 (18_06).mp4"
+                        },
+            {
+                "week": "week 1",
+                "name": "1 - 3 - The Android Development Environment - Part 2 (12_26).mp4",
+                "url": "courses/Android Development/week 1/vids/1 - 3 - The Android Development Environment - Part 2 (12_26).mp4"
+                        },
+            {
+                "week": "week 2",
+                "name": "2 - 1 - Application Fundamentals - Part 1 (15_24).mp4",
+                "url": "courses/Android Development/week 2/vids/2 - 1 - Application Fundamentals - Part 1 (15_24).mp4"
+                        },
+            {
+                "week": "week 2",
+                "name": "2 - 2 - Application Fundamentals - Part 2 (11_24).mp4",
+                "url": "courses/Android Development/week 2/vids/2 - 2 - Application Fundamentals - Part 2 (11_24).mp4"
+                        },
+            {
+                "week": "week 2",
+                "name": "2 - 3 - The Activity Class - Part 1 (14_06).mp4",
+                "url": "courses/Android Development/week 2/vids/2 - 3 - The Activity Class - Part 1 (14_06).mp4"
+                        },
+            {
+                "week": "week 2",
+                "name": "2 - 4 - The Activity Class - Part 2 (14_50).mp4",
+                "url": "courses/Android Development/week 2/vids/2 - 4 - The Activity Class - Part 2 (14_50).mp4"
+                        },
+            {
+                "week": "week 3",
+                "name": "3 - 1 - The Intent Class - Part 1 (9_14).mp4",
+                "url": "courses/Android Development/week 3/vids/3 - 1 - The Intent Class - Part 1 (9_14).mp4"
+                        },
+            {
+                "week": "week 3",
+                "name": "3 - 2 - The Intent Class - Part 2 (10_42).mp4",
+                "url": "courses/Android Development/week 3/vids/3 - 2 - The Intent Class - Part 2 (10_42).mp4"
+                        },
+            {
+                "week": "week 3",
+                "name": "3 - 3 - Permissions (12_28).mp4",
+                "url": "courses/Android Development/week 3/vids/3 - 3 - Permissions (12_28).mp4"
+                        },
+            {
+                "week": "week 3",
+                "name": "3 - 4 - The Fragment Class - Part 1 (11_24).mp4",
+                "url": "courses/Android Development/week 3/vids/3 - 4 - The Fragment Class - Part 1 (11_24).mp4"
+                        },
+            {
+                "week": "week 3",
+                "name": "3 - 5 - The Fragment Class - Part 2 (16_37).mp4",
+                "url": "courses/Android Development/week 3/vids/3 - 5 - The Fragment Class - Part 2 (16_37).mp4"
+                        }
+                ]
+    },
+    ,
+    "coverurl": "courses/Android Development/cover/Android Development.jpg",
+
+    "about": "This is android. This is androidThis is androidThis is androidThis is androidThis is androidThis is androidThis is androidThis is androidThis is androidThis is androidThis is androidThis is androidThis is androidThis is androidThis is androidThis is androidThis is androidThis is androidThis is androidThis is androidThis is android",
+
+    "prerequisite": "Java,Basic Data Structures",
+    "length": "5 weeks",
+    "effort": "5 hours/week",
+    "subject": "Android Development",
+    "level": "Intermediate",
+    "language": "English"
+
+}

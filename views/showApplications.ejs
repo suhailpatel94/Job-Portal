@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <%-include( 'commonLinks')%>
+        <meta charset="UTF-8">
+        <title>Job Details</title>
+</head>
+
+<body>
+
+    <%-include( 'jobPortalNavbar')%>
+
+        <div class="container">
+            <div class="row" style="margin:0 !important;padding:0 !important;">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Applications</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="list-group">
+                            <%for(var i=0;i<applicants.length;i++){%>
+                                <a href="../applicantdetails/<%-applicants[i]['username']%>" class="list-group-item">
+                                    <%if(applicants[i].certificate=="yes"){%>
+                                        <span class="badge"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                                        <%}%>
+                                            <%-i+1%>--
+                                                <%-applicants[i][ 'username']%>
+                                </a>
+                                <%}%>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+        <%applicants%>
+
+</body>
+
+</html>

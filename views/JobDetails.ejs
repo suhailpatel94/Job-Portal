@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <%-include( 'commonLinks')%>
+        <meta charset="UTF-8">
+        <title>Job Details</title>
+</head>
+
+<body>
+
+    <%-include( 'jobPortalNavbar')%>
+
+        <div class="container">
+            <div class="row" style="margin:0 !important;padding:0 !important;">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>About the Company</h4>
+                    </div>
+                    <div class="panel-body">
+                        <%-jobdetails[ 'Description']%>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4>Required Skills</h4>
+                        </div>
+                        <div class="panel-body">
+                            <%-jobdetails[ 'RequiredSkills']%>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class=" panel panel-default">
+                        <div class="panel-heading">
+                            <h4>Other Skills</h4>
+                        </div>
+                        <div class="panel-body">
+                            <%-jobdetails[ 'OtherSkills']%>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <div class=" panel panel-default">
+                        <div class="panel-heading">
+                            <h4>Salary</h4>
+                        </div>
+                        <div class="panel-body">
+                            Rs.
+                            <%-jobdetails[ 'Salary']%>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class=" panel panel-default">
+                        <div class="panel-heading">
+                            <h4>Contact Information</h4>
+                        </div>
+                        <div class="panel-body">
+                            E-mail:
+                            <%-jobdetails[ 'email']%>
+                                <br> phone Number:
+                                <%-jobdetails[ 'contact']%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           <div class="row">
+               
+               <div class="col-lg-6">
+                   <div class="panel panel-default">
+                       <div class="panel-heading">
+                           <h4>Vacancy</h4>
+                       </div>
+                        <div class="panel-body">
+                           <h4><%-jobdetails['Vacancy']%></h4>
+                       </div>
+                   </div>
+               </div>
+           </div>
+            <%if(session && session['Name'] && applied==false){%>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form action="" method="post" class="horizontal-form">
+
+                            <div class="form-group">
+                                <input type="submit" class="form-control btn btn-primary" value="Apply">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <%}%>
+                <%if(applied==true){%>
+                <div>You have already applied</div>
+              <%}%>
+        </div>
+
+</body>
+
+</html>
